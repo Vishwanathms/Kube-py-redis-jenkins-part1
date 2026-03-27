@@ -14,8 +14,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                git branch: 'main',
-                    url: 'https://github.com/Vishwanathms/Kube-py-redis-jenkins-part1',
-                    credentialsId: 'github-creds'
+                    url: 'https://github.com/Vishwanathms/Kube-py-redis-jenkins-part1'
             }
         }
 
