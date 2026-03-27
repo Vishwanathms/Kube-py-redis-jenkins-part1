@@ -52,9 +52,9 @@ pipeline {
 
         stage('Image Push') {
             steps {
-                sh "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 084375591912.dkr.ecr.us-east-1.amazonaws.com"
-                sh "docker tag pythonapp:v1 084375591912.dkr.ecr.us-east-1.amazonaws.com/pythonapp:v1"
-                sh "docker push 084375591912.dkr.ecr.us-east-1.amazonaws.com/pythonapp:v1"
+                sh "aws ecr get-login-password --region us-west-1 | docker login --username AWS --password-stdin 084375591912.dkr.ecr.us-east-1.amazonaws.com"
+                sh "docker tag pythonapp:v1 084375591912.dkr.ecr.us-west-1.amazonaws.com/pythonapp:v1"
+                sh "docker push 084375591912.dkr.ecr.us-west-1.amazonaws.com/pythonapp:v1"
             }
         }
         stage('Check kube env') {
